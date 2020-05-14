@@ -180,7 +180,7 @@ def player_numbers(team_name)
      team_name == game_hash[:away][:team_name]
      number = game_hash[:away][:players][:number]
      teams_numbers << number
-     teams_numbers
+     return teams_numbers
    end
  end
 
