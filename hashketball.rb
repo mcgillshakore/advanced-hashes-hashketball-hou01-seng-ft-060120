@@ -185,6 +185,7 @@ def player_numbers(team_name)
   team(team_name)[:players].map do |key, value|
     teams_numbers << value[:number]
   end
+  teams_numbers
 end
 
 def player_stats(player_name)
