@@ -173,11 +173,10 @@ end
 
 def player_numbers(team_name)
  teams_numbers = []
-   if team_name == game_hash[:home][:team_name]
+   if game_hash[:home][:team_name] == team_name
      number = game_hash[:home][:players][:number]
      teams_numbers << number
-   else
-     team_name == game_hash[:away][:team_name]
+   else game_hash[:away][:team_name] == team_name
      number = game_hash[:away][:players][:number]
      teams_numbers << number
      return teams_numbers
