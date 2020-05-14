@@ -155,14 +155,6 @@ def shoe_size(player_name)
    end
 end
 
-def team (team_name)
-  case team_name
-  when game_hash[:home][:team_name]
-     game_hash[:home]
-  when game_hash[:away][:team_name]
-    game_hash[:away]
-    end
-end
 
 def team_colors(team_name)
   if team_name == game_hash[:home][:team_name]
@@ -183,10 +175,10 @@ end
 def player_numbers(team_name)
  game_hash.each do |location, team_data|
    team_data.each do |attribute, data|
-     if attribute == :players
+     if attribute == :team_name
       data.each do |data_item|
         if data_item[:player_name] == player_name
-          return data_item[:shoe]
+          return data_item[:number]
           end
        end
       end
