@@ -182,7 +182,7 @@ end
 
 def player_numbers(team_name)
  teams_numbers = []
-  team(team_name)[:players].map do |key, value|
+  team(team_name)[:players].each do |key, value|
     teams_numbers << value[:number]
   end
   teams_numbers
