@@ -173,17 +173,11 @@ def team_names
 end
 
 def player_numbers(team_name)
- game_hash.each do |location, team_data|
-   team_data.each do |attribute, data|
-     if attribute == :players
-      data.each do |data_item|
-        if data_item[:team_name] == team_name
-          return data_item[:number]
-          end
-       end
-      end
-     end
-   end
+  teams_numbers = []
+  if team_name == game_hash[:home][:team_name]
+    teams_numbers << game_hash[:home][:players][:number]
+  else 
+    teams_numbers << game_hash[:away][:players][:number]
 end
 
 def player_stats(player_name)
