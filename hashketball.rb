@@ -174,7 +174,14 @@ end
 def player_numbers(team_name)
  teams_numbers = []
    if team_name == game_hash[:home][:team_name]
+     number = game_hash[:home][:players][:number]
+     teams_numbers << number
    else
+     team_name == game_hash[:away][:team_name]
+     number = game_hash[:away][:players][:number]
+     teams_numbers << number
+   end
+ end
 
 def player_stats(player_name)
 end
