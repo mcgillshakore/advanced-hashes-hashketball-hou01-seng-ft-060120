@@ -178,6 +178,7 @@ def player_numbers(team_name)
     teams_numbers << game_hash[:home][:players][:number]
   else 
     teams_numbers << game_hash[:away][:players][:number]
+  end
 end
 
 def player_stats(player_name)
