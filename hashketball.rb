@@ -178,7 +178,7 @@ def player_numbers(team_name)
       team_data.each do |attribute, data|
         if attribute == :players
           data.each do |player|
-          team_numbers << player[:number]
+          team_number << player[:number]
           end
         end
       end
