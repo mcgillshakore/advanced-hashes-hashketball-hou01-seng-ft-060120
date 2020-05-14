@@ -165,7 +165,7 @@ end
 
 def team_names(game_hash)
   teams =[]
-  teams << game_hash[team_name]
+  teams << game_hash[:team_name]
   
 end
 
