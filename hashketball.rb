@@ -155,6 +155,14 @@ def shoe_size(player_name)
    end
 end
 
+def team (team_name)
+  case team_name
+  when game_hash[:home][:team_name]
+      game_hash[:home]
+  when game_hash[:away][:team_name]
+    game_hash[:away]
+    end
+end
 
 def team_colors(team_name)
   if team_name == game_hash[:home][:team_name]
@@ -173,13 +181,9 @@ def team_names
 end
 
 def player_numbers(team_name)
-  teams_numbers = []
-  if team_name == game_hash[:home][:team_name]
-    teams_numbers << game_hash[:home][:players][:number]
-  else 
-    teams_numbers << game_hash[:away][:players][:number]
+  team(team_name)[:players].map do |key, value|
+    value[:number]
   end
-  return teams_numbers
 end
 
 def player_stats(player_name)
