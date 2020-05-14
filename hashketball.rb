@@ -160,6 +160,7 @@ def team_colors(team_name)
     team_data.each do |attribute, data|
       if attribute == :colors
         return a
+    end
 end
 
 def team_names(game_hash)
