@@ -179,7 +179,7 @@ def player_numbers(team_name)
   else 
     teams_numbers << game_hash[:away][:players][:number]
   end
-  teams_numbers
+  return teams_numbers
 end
 
 def player_stats(player_name)
