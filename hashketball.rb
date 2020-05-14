@@ -193,7 +193,6 @@ def player_stats(player_name)
       if attribute == :players
         data.each do |player|
           if player_name == player[:player_name]
-            player.delete(:player_name)
             return player
           end
         end
