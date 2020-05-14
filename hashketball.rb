@@ -181,9 +181,17 @@ def team_names
 end
 
 def player_numbers(team_name)
-  team(team_name)[:players].map do |key, value|
-    value[:number]
-  end
+ game_hash.each do |location, team_data|
+   team_data.each do |attribute, data|
+     if attribute == :players
+      data.each do |data_item|
+        if data_item[:player_name] == player_name
+          return data_item[:shoe]
+          end
+       end
+      end
+     end
+   end
 end
 
 def player_stats(player_name)
