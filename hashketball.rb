@@ -157,9 +157,11 @@ end
 
 def team_colors(team_name)
   game_hash.each do |location, team_data|
-    team_data.each do |attribute|
-      if attribute == :colors
-        return attribute[:colors]
+    team_data.each do |attribute, data|
+          if attribute == :colors
+          data.each do |data_item|
+            return data_item[:colors]
+        end
       end
     end
   end
